@@ -1,0 +1,99 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body,input,select,.ketQua{
+    background-color: #edf2f9;
+    font-family: 'Roboto', sans-serif;
+}
+ul{
+    list-style: none;
+    text-align: center;
+    margin-top: 20px;
+}
+li {
+    padding: 10px 20px;
+    margin: 10px 10px;
+    border-radius: 6px;
+    box-shadow: rgb(125 125 125 / 50%) 3px 3px 4px 0px, rgb(255 255 255 / 50%) -3px -3px 11px 1px;
+    cursor: pointer;
+    transition: .1s;
+}
+input {
+    width: 200px;
+    font-size: 16px;
+    margin: 20px 10px 20px 0;
+    padding: 15px 12px;
+    border-radius: 6px;
+    outline: none;
+    border: none;
+    box-shadow: rgb(125 125 125 / 80%) 1px 1px 4px 1px inset, rgb(255 255 255 / 80%) -2px -2px 8px 1px inset;
+}
+input:focus{
+    background-color: white;
+}
+button{
+    margin: 20px 0;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    color: white;
+    background: rgb(138, 106, 171);
+    cursor: pointer;
+    transition: 0.3s;
+}
+select{
+    width: 200px;
+    font-size: 16px;
+    margin: 20px 10px 20px 0;
+    padding: 15px 12px;
+    border-radius: 6px;
+    outline: none;
+    border: none;
+    box-shadow: rgb(125 125 125 / 80%) 1px 1px 4px 1px inset, rgb(255 255 255 / 80%) -2px -2px 8px 1px inset; 
+}
+.container{
+    width: 70%;
+    height: 80vh;
+    margin: 60px auto;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: rgb(125 125 125 / 50%) 3px 3px 4px 0px, rgb(255 255 255 / 50%) -3px -3px 11px 1px;
+}
+.list{
+    background-color:#c5d8e6;
+    width: 15%;
+    height: 100%;
+    position: absolute;
+    border-radius: 10px 0 0 10px;
+}
+.content{
+    width: 85%;
+    height: 100%;
+    background-image: linear-gradient(to right, #b9bbd3, #a8dfc9);
+    position: absolute;
+    right: 0;
+    border-radius: 0 10px 10px 0;
+}
+.baitap{
+    margin: 20px;
+}
+.baitap h2{
+    margin-bottom: 20px;
+}
+.ketQua{
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: rgb(125 125 125 / 80%) 1px 1px 4px 1px inset, rgb(255 255 255 / 80%) -2px -2px 8px 1px inset;
+}
+.active{
+    background-color: rgb(138, 106, 171);
+    color: white;
+}
+.active:hover{
+    color: white;
+}
+button:hover{
+    transform: scale(0.97);
+}

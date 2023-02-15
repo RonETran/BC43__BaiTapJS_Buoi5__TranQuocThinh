@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Buổi 5</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="list">
+        <ul>
+          <li id="change-bg1" class="active" onclick="baiTapMot()">Bài 1</li>
+          <li id="change-bg2" onclick="baiTapHai()">Bài 2</li>
+          <li id="change-bg3" onclick="baiTapBa()">Bài 3</li>
+          <li id="change-bg4" onclick="baiTapBon()">Bài 4</li>
+        </ul>
+      </div>
+      <div class="content">
+        <!-- Bài 1 -->
+        <div id="baiMot" class="baitap">
+          <h2>Bài 1: Quản lý tuyển sinh</h2>
+          <input type="number" id="diemChuan" placeholder="Nhập điểm chuẩn" />
+          <br />
+          <input type="number" id="diemToan" placeholder="Nhập điểm toán" />
+          <input type="number" id="diemLy" placeholder="Nhập điểm lý" />
+          <input type="number" id="diemHoa" placeholder="Nhập điểm hóa" />
+          <br />
+          <select name="khuvuc" id="khuVuc">
+            <option value="0">Chọn khu vực</option>
+            <option value="2">A</option>
+            <option value="1">B</option>
+            <option value="0.5">C</option>
+          </select>
+          <select name="doituong" id="doiTuong">
+            <option value="0">Chọn đối tượng</option>
+            <option value="2.5">1</option>
+            <option value="1.5">2</option>
+            <option value="1">3</option>
+          </select>
+          <br />
+          <button onclick="ketQua()">Kết quả</button>
+          <div class="ketQua">
+            <i class="fa fa-angle-right"></i>
+            <span id="thongBao"></span>
+          </div>
+        </div>
+
+        <!-- Bài 2 -->
+        <div id="baiHai" class="baitap" style="display: none">
+          <h2>Bài 2: Tính tiền điện</h2>
+          <input type="text" placeholder="Nhập họ tên" id="hoTen" />
+          <input type="number" placeholder="Nhập số kw" id="soDien" />
+          <br />
+          <button onclick="tienDien()">Tính tiền điện</button>
+          <div class="ketQua">
+            <i class="fa fa-angle-right"></i>
+            <span id="soTien"></span>
+          </div>
+        </div>
+
+        <!-- Bài 3 -->
+        <div id="baiBa" class="baitap" style="display:none">
+          <h2>Bài 3: Tính thuế thu nhập cá nhân</h2>
+          <input type="text" placeholder="Nhập họ và tên" id="hoVaTen">
+          <input type="number" placeholder="Tổng thu nhập năm" id="thuNhap">
+          <input type="number" placeholder="Số người phụ thuộc" id="soNguoi">
+          <br>
+          <button onclick="tinhThue()">Tính thuế thu nhập cá nhân</button>
+          <div class="ketQua">
+            <i class="fa fa-angle-right"></i>
+            <span id="thueThuNhap"></span> 
+          </div>
+        </div>
+
+        <!-- Bài 4 -->
+        <div id="baiBon" class="baitap" style="display: none;">
+          <h2>Bài 4: Tính tiền cáp</h2>
+          <select id="loaiKhachHang" onchange="show()">
+            <option value="0">Chọn loại khách hàng</option>
+            <option value="1">Nhà Dân</option>
+            <option value="2">Doanh Nghiệp</option>
+          </select>
+          <input type="text" id="maKhachHang" placeholder="Nhập mã khách hàng">
+          <input type="number" id="kenhCaoCap" placeholder="Số kênh cao cấp">
+          <input type="number" id="soKetNoi" placeholder="Số kết nối" style="display: none;">
+          <br>
+          <button onclick="tinhTienCap()">Tính tiền cáp</button>
+          <div class="ketQua">
+            <i class="fa fa-angle-right"></i>
+            <span id="tinhTienCap"></span> 
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>
