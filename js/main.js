@@ -123,17 +123,17 @@ function tinhThue() {
   }else if (chiuThue<=60000000) {
     chiuThue = chiuThue * 0.05;
   }else if (chiuThue<=120000000) {
-    chiuThue = chiuThue * 0.1;
+    chiuThue = (chiuThue-60000000) * 0.1 + 60000000*0.05;
   }else if (chiuThue<=210000000) {
-    chiuThue = chiuThue * 0.15;
+    chiuThue = (chiuThue-120000000) * 0.15 + 60000000*(0.1+0.05);
   }else if (chiuThue<=384000000) {
-    chiuThue = chiuThue * 0.2;
+    chiuThue = (chiuThue-210000000) * 0.2 + 90000000*0.15 + 60000000*(0.1+0.05);
   }else if (chiuThue<=624000000) {
-    chiuThue = chiuThue * 0.25;
+    chiuThue = (chiuThue-384000000) * 0.25 + 174000000*0.2 + 90000000*0.15 + 60000000*(0.1+0.05);
   }else if (chiuThue<=960000000) {
-    chiuThue = chiuThue * 0.3;
+    chiuThue = (chiuThue-624000000) * 0.3 + 240000000*0.25 + 174000000*0.2 + 90000000*0.15 + 60000000*(0.1+0.05);
   }else {
-    chiuThue = chiuThue * 0.35;
+    chiuThue = (chiuThue-960000000) * 0.35 + 336000000*0.3 + 240000000*0.25 + 174000000*0.2 + 90000000*0.15 + 60000000*(0.1+0.05);
   }
   thueThuNhap.innerHTML = "Họ tên: " + hoVaTen + ". Tiền thuế thu nhập cá nhân: " + chiuThue.toLocaleString() + ' VND';
 }
